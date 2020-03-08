@@ -37,11 +37,7 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull MainListAdapter.ViewHolder holder, int position) {
         final UserResponse userData = userResponseList.get(position);
-
-        holder.txtName.setText(userData.getFirstName() + " " + userData.getLastName());
-        holder.txtEmail.setText(userData.getEmail());
-
-        Glide.with(context).load(userData.getAvatar()).into(holder.imgUser);
+        holder.bind(context, userData, listener);
     }
 
     @Override

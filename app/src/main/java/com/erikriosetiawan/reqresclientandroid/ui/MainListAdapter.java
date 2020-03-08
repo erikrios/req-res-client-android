@@ -20,10 +20,12 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.ViewHo
 
     private final Context context;
     private List<UserResponse> userResponseList;
+    private final OnItemClickListener listener;
 
-    public MainListAdapter(Context context, List<UserResponse> userResponseList) {
+    public MainListAdapter(Context context, List<UserResponse> userResponseList, OnItemClickListener itemClickListener) {
         this.context = context;
         this.userResponseList = userResponseList;
+        this.listener = itemClickListener;
     }
 
     @NonNull
@@ -58,10 +60,23 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.ViewHo
             txtName = itemView.findViewById(R.id.txt_name);
             txtEmail = itemView.findViewById(R.id.txt_email);
         }
+
+        public void bind(Context context, final UserResponse item, final OnItemClickListener listener) {
+            txtName.setText(item.getFirstName() + " " + item.getLastName());
+            txtEmail.setText(item.getEmail());
+
+            Glide.with(context).load(item.getAvatar()).into(imgUser);
+
+            itemView.setOnClickListener(v -> listener.onItemClick(item));
+        }
     }
 
     public void updateData(List<UserResponse> newData) {
         userResponseList = newData;
         notifyDataSetChanged();
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(UserResponse item);
     }
 }

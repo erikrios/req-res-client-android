@@ -1,8 +1,10 @@
-package com.erikriosetiawan.reqresclientandroid;
+package com.erikriosetiawan.reqresclientandroid.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.erikriosetiawan.reqresclientandroid.R;
 
 public class MainActivity extends AppCompatActivity {
 

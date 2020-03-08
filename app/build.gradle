@@ -13,7 +13,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "BASE_URL", "\"https://reqres.in/\""
+        buildConfigField "String", "BASE_URL", "\"https://reqres.in/api/\""
     }
 
     buildTypes {

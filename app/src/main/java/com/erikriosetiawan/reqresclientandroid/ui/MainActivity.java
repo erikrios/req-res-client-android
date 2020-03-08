@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.erikriosetiawan.reqresclientandroid.R;
 import com.erikriosetiawan.reqresclientandroid.data.model.BaseResponse;
+import com.erikriosetiawan.reqresclientandroid.data.model.UserResponse;
 import com.erikriosetiawan.reqresclientandroid.data.remote.ApiClient;
 import com.erikriosetiawan.reqresclientandroid.data.remote.ApiInterface;
 

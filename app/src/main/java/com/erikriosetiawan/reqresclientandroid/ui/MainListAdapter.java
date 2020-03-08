@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.erikriosetiawan.reqresclientandroid.R;
-import com.erikriosetiawan.reqresclientandroid.data.model.UserResponse;
 
 import java.util.List;
 

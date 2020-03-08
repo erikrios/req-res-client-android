@@ -42,7 +42,7 @@ public class UserResponse {
 	@Override
  	public String toString(){
 		return 
-			"Data{" + 
+			"DataItem{" + 
 			"last_name = '" + lastName + '\'' + 
 			",id = '" + id + '\'' + 
 			",avatar = '" + avatar + '\'' + 

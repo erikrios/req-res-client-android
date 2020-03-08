@@ -73,6 +73,7 @@ public class MainListActivity extends AppCompatActivity {
                 showProgress(false);
                 BaseListResponse baseResponse = response.body();
                 userResponseList = baseResponse.getData();
+                mainListAdapter.updateData(userResponseList);
             }
 
             @Override

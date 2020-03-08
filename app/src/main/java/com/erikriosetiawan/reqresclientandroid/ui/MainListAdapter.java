@@ -12,13 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.erikriosetiawan.reqresclientandroid.R;
+import com.erikriosetiawan.reqresclientandroid.data.model.UserResponse;
 
 import java.util.List;
 
 public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.ViewHolder> {
 
     private final Context context;
-    private final List<UserResponse> userResponseList;
+    private List<UserResponse> userResponseList;
 
     public MainListAdapter(Context context, List<UserResponse> userResponseList) {
         this.context = context;
@@ -57,5 +58,10 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.ViewHo
             txtName = itemView.findViewById(R.id.txt_name);
             txtEmail = itemView.findViewById(R.id.txt_email);
         }
+    }
+
+    public void updateData(List<UserResponse> newData) {
+        userResponseList = newData;
+        notifyDataSetChanged();
     }
 }

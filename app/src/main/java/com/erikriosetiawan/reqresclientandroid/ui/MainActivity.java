@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         showProgress(true);
 
-        Call<BaseResponse> call = apiInterface.getUser();
+        Call<BaseResponse> call = apiInterface.getUser(2);
         call.enqueue(new Callback<BaseResponse>() {
             @Override
             public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {

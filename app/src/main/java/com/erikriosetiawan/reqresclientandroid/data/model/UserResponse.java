@@ -2,7 +2,7 @@ package com.erikriosetiawan.reqresclientandroid.data.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Data{
+public class UserResponse {
 
 	@SerializedName("last_name")
 	private String lastName;

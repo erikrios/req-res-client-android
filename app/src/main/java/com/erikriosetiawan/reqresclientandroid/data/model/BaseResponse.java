@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName;
 public class BaseResponse{
 
 	@SerializedName("data")
-	private Data data;
+	private UserResponse data;
 
-	public Data getData(){
+	public UserResponse getData(){
 		return data;
 	}
 
